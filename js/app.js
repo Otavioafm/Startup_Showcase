@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startupBtn.addEventListener('click', handleStartupClick);
   }
 
-  fetch('../../data/startups.json')
+  fetch('data/startups.json')
     .then(response => {
       if (!response.ok) throw new Error('Erro ao carregar startups.json: ' + response.statusText);
       return response.json();
