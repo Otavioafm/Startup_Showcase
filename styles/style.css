@@ -96,6 +96,7 @@ body {
   transition: 0.2s;
   white-space: nowrap;
   background: #0066cc;;
+  top: -36rem;
 }
 
 .nav-button.primary:hover {
