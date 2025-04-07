@@ -1,0 +1,26 @@
+[
+    {
+      "startupId": 1,
+      "logo": "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "name": "TechFlow Solutions",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "content": "Acabamos de lançar nosso MVP! 🚀",
+      "viewed": false
+    },
+    {
+      "startupId": 2,
+      "logo": "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "name": "AgroSmart Brasil",
+      "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "content": "Estamos na final de um pitch! 🏆",
+      "viewed": false
+    },
+    {
+      "startupId": 3,
+      "logo": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "name": "HealthTech AI",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "content": "Novo parceiro estratégico a bordo! 🤝",
+      "viewed": false
+    }
+  ]

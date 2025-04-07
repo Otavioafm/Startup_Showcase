@@ -1,0 +1,241 @@
+{
+  "startups": [
+    {
+      "id": 1,
+      "nome": "TechFlow Solutions",
+      "categoria": "FinTech",
+      "descricao": "Plataforma SaaS de automação de processos empresariais com IA integrada.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "logo": "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "team": [
+        {
+          "name": "João Silva",
+          "role": "CEO & Founder",
+          "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "10 anos de experiência em tecnologia"
+        },
+        {
+          "name": "Maria Santos",
+          "role": "CTO",
+          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Especialista em IA"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Pitch Deck",
+          "url": "https://example.com/techflow-pitch.pdf"
+        },
+        {
+          "name": "Relatório Financeiro",
+          "url": "https://example.com/techflow-finance.pdf"
+        }
+      ],
+      "roadmap": [
+        {
+          "date": "2024 Q1",
+          "milestone": "Lançamento da versão 2.0"
+        },
+        {
+          "date": "2024 Q2",
+          "milestone": "Expansão internacional"
+        }
+      ],
+      "media": {
+        "video": "https://www.youtube.com/embed/exemplo"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "AgroSmart Brasil",
+      "categoria": "AgriTech",
+      "descricao": "Sistema IoT para monitoramento e otimização de produção agrícola.",
+      "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "logo": "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "team": [
+        {
+          "name": "Pedro Oliveira",
+          "role": "CEO & Founder",
+          "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Engenheiro Agrônomo com MBA em Agronegócio"
+        },
+        {
+          "name": "Ana Costa",
+          "role": "CTO",
+          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Especialista em IoT e Agricultura de Precisão"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Pitch Deck",
+          "url": "https://example.com/agrosmart-pitch.pdf"
+        },
+        {
+          "name": "Relatório de Impacto",
+          "url": "https://example.com/agrosmart-impact.pdf"
+        }
+      ],
+      "roadmap": [
+        {
+          "date": "2024 Q1",
+          "milestone": "Expansão para América Latina"
+        },
+        {
+          "date": "2024 Q2",
+          "milestone": "Lançamento do Sistema 2.0"
+        }
+      ],
+      "media": {
+        "video": "https://www.youtube.com/embed/exemplo2"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "HealthTech AI",
+      "categoria": "HealthTech",
+      "descricao": "Plataforma de diagnóstico médico assistido por IA.",
+      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "logo": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "team": [
+        {
+          "name": "Carlos Santos",
+          "role": "CEO & Founder",
+          "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Médico com especialização em IA na Saúde"
+        },
+        {
+          "name": "Laura Silva",
+          "role": "CTO",
+          "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "PhD em Machine Learning aplicado à Medicina"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Pitch Deck",
+          "url": "https://example.com/healthtech-pitch.pdf"
+        },
+        {
+          "name": "Estudo Clínico",
+          "url": "https://example.com/healthtech-study.pdf"
+        }
+      ],
+      "roadmap": [
+        {
+          "date": "2024 Q1",
+          "milestone": "Certificação ANVISA"
+        },
+        {
+          "date": "2024 Q2",
+          "milestone": "Expansão para Hospitais"
+        }
+      ],
+      "media": {
+        "video": "https://www.youtube.com/embed/exemplo3"
+      }
+    },
+    {
+      "id": 4,
+      "nome": "EduTech Pro",
+      "categoria": "EdTech",
+      "descricao": "Plataforma adaptativa de ensino online com IA.",
+      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "logo": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "team": [
+        {
+          "name": "Marcos Lima",
+          "role": "CEO & Founder",
+          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Educador e Especialista em Tecnologia Educacional"
+        },
+        {
+          "name": "Julia Costa",
+          "role": "CTO",
+          "photo": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Mestre em Ciência da Computação"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Pitch Deck",
+          "url": "https://example.com/edutech-pitch.pdf"
+        },
+        {
+          "name": "Caso de Sucesso",
+          "url": "https://example.com/edutech-case.pdf"
+        }
+      ],
+      "roadmap": [
+        {
+          "date": "2024 Q1",
+          "milestone": "Lançamento do App Mobile"
+        },
+        {
+          "date": "2024 Q2",
+          "milestone": "Integração com LMS"
+        }
+      ],
+      "media": {
+        "video": "https://www.youtube.com/embed/exemplo4"
+      }
+    },
+    {
+      "id": 5,
+      "nome": "FinanceFlow",
+      "categoria": "FinTech",
+      "descricao": "Sistema de gestão financeira empresarial.",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
+      "logo": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "team": [
+        {
+          "name": "Roberto Alves",
+          "role": "CEO & Founder",
+          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "15 anos de experiência em Mercado Financeiro"
+        },
+        {
+          "name": "Fernanda Santos",
+          "role": "CTO",
+          "photo": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+          "bio": "Especialista em Blockchain e Sistemas Financeiros"
+        }
+      ],
+      "documents": [
+        {
+          "name": "Pitch Deck",
+          "url": "https://example.com/financeflow-pitch.pdf"
+        },
+        {
+          "name": "White Paper",
+          "url": "https://example.com/financeflow-whitepaper.pdf"
+        }
+      ],
+      "roadmap": [
+        {
+          "date": "2024 Q1",
+          "milestone": "Integração com Open Banking"
+        },
+        {
+          "date": "2024 Q2",
+          "milestone": "Módulo de Crypto"
+        }
+      ],
+      "media": {
+        "video": "https://www.youtube.com/embed/exemplo5"
+      }
+    }
+  ],
+  "categories": [
+    "Todas",
+    "FinTech",
+    "HealthTech",
+    "EdTech",
+    "AgriTech",
+    "E-commerce",
+    "LogTech",
+    "CleanTech",
+    "PropTech",
+    "FoodTech"
+  ]
+}

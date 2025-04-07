@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrine de Startups</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-top">
+        <h1>Startup Showcase</h1>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="nav-menu">
+          <button class="nav-button login-btn">Entrar</button>
+          <button class="nav-button cadastro-btn">Cadastrar</button>
+          <button class="nav-button primary">Anunciar Startup</button>
+          <button class="nav-button logout-btn" style="display: none;" onclick="logout()">Sair</button>
+        </nav>
+      </div>
+      <div class="search-container">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Buscar startups...">
+          <button class="search-button">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-overlay"></div>
+
+  <main class="container">
+    <div class="stories-container" id="storiesContainer"></div>
+    <div class="category-filter" id="categoryFilter"></div>
+    <div class="startup-grid" id="startupGrid"></div>
+  </main>
+
+  <!-- Popup de Login -->
+  <div class="popup-overlay" id="popupOverlay"></div>
+  <div class="popup" id="loginPopup">
+    <button class="close-popup" id="closePopup">×</button>
+    <h2>Faça login para continuar</h2>
+    <p>Você precisa estar logado para interagir com as startups.</p>
+    <div class="popup-buttons">
+      <button class="popup-button" id="popupLoginButton">Login</button>
+      <button class="popup-button" id="popupCadastroButton">Cadastrar</button>
+    </div>
+  </div>
+
+  <!-- Story Modal -->
+  <div class="story-modal" id="storyModal">
+    <div class="story-modal-content">
+      <button class="story-modal-close" onclick="closeStoryModal()">×</button>
+      <img id="storyImage" src="" alt="Story" class="story-modal-image">
+      <div class="story-info">
+        <div class="story-header">
+          <img id="storyLogo" src="" alt="Logo" class="story-logo">
+          <span id="storyName" class="story-name-active"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Startup Modal -->
+  <div class="modal" id="startupModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <button class="close-button" onclick="closeModal()">×</button>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/auth-popup.js"></script>
+</body>
+</html>
