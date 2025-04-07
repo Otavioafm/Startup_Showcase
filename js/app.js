@@ -1,7 +1,7 @@
 // src/js/app.js
 
 // State management
-let likedStartups = new Set();
+
 let currentCategory = 'Todas';
 let searchQuery = '';
 let startups = [];
@@ -57,27 +57,6 @@ function logout() {
   updateNavButtons();
   renderStartups();
   console.log('Usuário deslogado, isLoggedIn:', localStorage.getItem('isLoggedIn'));
-}
-
-function updateNavButtons() {
-  const loginBtn = document.querySelector('.login-btn');
-  const cadastroBtn = document.querySelector('.cadastro-btn');
-  const logoutBtn = document.querySelector('.logout-btn');
-
-  if (loginBtn && cadastroBtn && logoutBtn) {
-    if (isUserLoggedIn()) {
-      loginBtn.style.display = 'none';
-      cadastroBtn.style.display = 'none';
-      logoutBtn.style.display = 'inline-block';
-    } else {
-      loginBtn.style.display = 'inline-block';
-      cadastroBtn.style.display = 'inline-block';
-      logoutBtn.style.display = 'none';
-    }
-    console.log('Botões atualizados, isLoggedIn:', localStorage.getItem('isLoggedIn'));
-  } else {
-    console.error('Um ou mais botões de navegação não foram encontrados no DOM.');
-  }
 }
 
 // Separar categorias principais e secundárias
@@ -191,7 +170,6 @@ function renderStartups() {
         </div>
         <p class="card-description">${startup.descricao}</p>
         <div class="card-stats">
-          <span>${startup.likes || 0} curtidas</span>
         </div>
         <div class="card-actions">
           <button class="details-button ${!isUserLoggedIn() ? 'disabled' : ''}" 
@@ -199,10 +177,7 @@ function renderStartups() {
             Ver detalhes
           </button>
           <div class="action-buttons">
-            <button class="action-button ${likedStartups.has(startup.id) ? 'liked' : ''} ${!isUserLoggedIn() ? 'disabled' : ''}" 
-                    onclick="${isUserLoggedIn() ? `toggleLike(${startup.id})` : 'openPopup()'}">
-              ${heartIcon(likedStartups.has(startup.id))} ${startup.likes || 0}
-            </button>
+  
             <button class="action-button" onclick="shareStartup(${startup.id})">
               ${shareIcon}
             </button>
@@ -232,7 +207,6 @@ function openModal(startupId) {
       <div class="info-content">
         <h3>Sobre a empresa</h3>
         <p>${startup.descricao}</p>
-        <p><strong>Curtidas:</strong> ${startup.likes || 0}</p>
         <p><strong>Compartilhamentos:</strong> ${startup.shares || 0}</p>
         <p><strong>Criado em:</strong> ${startup.createdAt ? new Date(startup.createdAt).toLocaleDateString() : 'N/A'}</p>
         <p><strong>Atualizado em:</strong> ${startup.updatedAt ? new Date(startup.updatedAt).toLocaleDateString() : 'N/A'}</p>
@@ -305,27 +279,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-// Like and share functions
-function toggleLike(startupId) {
-  if (!isUserLoggedIn()) {
-    openPopup();
-    return;
-  }
-
-  const startup = startups.find(s => s.id === startupId);
-  if (!startup) return;
-
-  if (likedStartups.has(startupId)) {
-    // Descurtir: remove o like e diminui o número
-    likedStartups.delete(startupId);
-    startup.likes = (startup.likes || 0) - 1;
-  } else {
-    // Curtir: adiciona o like e aumenta o número
-    likedStartups.add(startupId);
-    startup.likes = (startup.likes || 0) + 1;
-  }
-  renderStartups();
-}
 
 function shareStartup(startupId) {
   const startup = startups.find(s => s.id === startupId);
@@ -395,120 +348,7 @@ const fileIcon = `
 `;
 
 // Função para renderizar os stories
-function renderStories() {
-  console.log('Iniciando renderStories...');
-  fetch('../../data/stories.json')
-    .then(response => {
-      console.log('Resposta do fetch:', response);
-      if (!response.ok) throw new Error('Erro ao carregar stories.json: ' + response.statusText);
-      return response.json();
-    })
-    .then(data => {
-      stories = data.map(story => ({
-        ...story,
-        viewed: story.viewed || false
-      }));
-      console.log('Stories carregados:', stories);
-      const storiesContainer = document.getElementById('storiesContainer');
-      if (!storiesContainer) {
-        console.error('Elemento storiesContainer não encontrado no DOM');
-        return;
-      }
-      console.log('Renderizando stories...');
-      storiesContainer.innerHTML = `
-        ${isUserLoggedIn() ? `
-          <div class="story add-story" onclick="adicionarStory()">
-            <div class="story-image-container">
-              <div class="add-story-icon">
-                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                  <path d="M12 4v16m8-8H4"></path>
-                </svg>
-              </div>
-            </div>
-            <span class="story-name">Adicionar</span>
-          </div>
-        ` : ''}
-        ${stories.map(story => `
-          <div class="story ${story.viewed ? 'viewed' : ''}" onclick="openStoryModal(${story.startupId})">
-            <div class="story-image-container" style="--background-image: url('${story.logo}');">
-              <img src="${story.logo}" alt="${story.name}" class="story-image">
-            </div>
-            <span class="story-name">${story.name.split(' ')[0]}</span>
-          </div>
-        `).join('')}
-      `;
-    })
-    .catch(error => console.error('Erro ao carregar stories:', error));
-}
 
-// Função para abrir o modal do story
-function openStoryModal(startupId) {
-  console.log('Abrindo modal do story para startupId:', startupId);
-  currentStoryIndex = stories.findIndex(s => s.startupId === startupId);
-  if (currentStoryIndex === -1) {
-    console.error('Story não encontrado para o startupId:', startupId);
-    return;
-  }
-
-  updateStoryModal();
-}
-
-// Função para atualizar o modal do story
-function updateStoryModal() {
-  const story = stories[currentStoryIndex];
-  if (!story) return;
-
-  // Atualiza os elementos do modal
-  storyImage.src = story.image;
-  storyLogo.src = story.logo;
-  storyName.textContent = story.name;
-
-  // Adiciona os botões de navegação dinamicamente, se ainda não existirem
-  let storyNav = storyModal.querySelector('.story-nav');
-  if (!storyNav) {
-    storyNav = document.createElement('div');
-    storyNav.className = 'story-nav';
-    storyNav.innerHTML = `
-      <button class="story-nav-button prev" onclick="prevStory()"><</button>
-      <button class="story-nav-button next" onclick="nextStory()">></button>
-    `;
-    storyModal.querySelector('.story-modal-content').appendChild(storyNav);
-  }
-
-  // Exibe o modal
-  storyModal.classList.add('active');
-
-  // Marca como visualizado
-  story.viewed = true;
-  renderStories();
-
-  // Configura o timer pra fechar automaticamente
-  clearTimeout(storyTimer);
-  storyTimer = setTimeout(() => {
-    closeStoryModal();
-  }, 5000);
-}
-
-// Funções de navegação entre stories
-function prevStory() {
-  if (currentStoryIndex > 0) {
-    currentStoryIndex--;
-    updateStoryModal();
-  }
-}
-
-function nextStory() {
-  if (currentStoryIndex < stories.length - 1) {
-    currentStoryIndex++;
-    updateStoryModal();
-  }
-}
-
-// Função para fechar o modal do story
-function closeStoryModal() {
-  storyModal.classList.remove('active');
-  clearTimeout(storyTimer);
-}
 
 // Event Listeners
 let categoriesData = [];
@@ -544,8 +384,6 @@ document.addEventListener('DOMContentLoaded', () => {
       categoriesData = data.categories;
       renderCategories(categoriesData);
       renderStartups();
-      updateNavButtons();
-      renderStories();
     })
     .catch(error => console.error('Erro ao carregar dados:', error));
 });
