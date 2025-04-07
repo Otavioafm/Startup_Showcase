@@ -1,7 +1,6 @@
 // src/js/app.js
 
 // State management
-
 let currentCategory = 'Todas';
 let searchQuery = '';
 let startups = [];
@@ -177,7 +176,6 @@ function renderStartups() {
             Ver detalhes
           </button>
           <div class="action-buttons">
-  
             <button class="action-button" onclick="shareStartup(${startup.id})">
               ${shareIcon}
             </button>
@@ -207,9 +205,7 @@ function openModal(startupId) {
       <div class="info-content">
         <h3>Sobre a empresa</h3>
         <p>${startup.descricao}</p>
-        <p><strong>Compartilhamentos:</strong> ${startup.shares || 0}</p>
-        <p><strong>Criado em:</strong> ${startup.createdAt ? new Date(startup.createdAt).toLocaleDateString() : 'N/A'}</p>
-        <p><strong>Atualizado em:</strong> ${startup.updatedAt ? new Date(startup.updatedAt).toLocaleDateString() : 'N/A'}</p>
+        <p><br><strong>Estágio:</strong> ${startup.estagio}</p>
       </div>
     </div>
 
@@ -279,7 +275,6 @@ function closeModal() {
   document.body.style.overflow = '';
 }
 
-
 function shareStartup(startupId) {
   const startup = startups.find(s => s.id === startupId);
   if (!startup) return;
@@ -315,7 +310,7 @@ function handleStartupClick(event) {
     event.preventDefault();
     openPopup();
   } else {
-    window.location.href = 'anunciarStartup.html';
+    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSeRmpdxnDUe7ehnR-dDX7QTpS1JXgwIfYcP-yTkCNSqpx9EHQ/viewform?usp=dialog';
   }
 }
 
@@ -348,7 +343,6 @@ const fileIcon = `
 `;
 
 // Função para renderizar os stories
-
 
 // Event Listeners
 let categoriesData = [];
