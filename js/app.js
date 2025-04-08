@@ -1,5 +1,14 @@
 // src/js/app.js
 
+// Limpa o cache do navegador ao carregar a página
+if ('caches' in window) {
+  caches.keys().then(cacheNames => {
+    cacheNames.forEach(cacheName => {
+      caches.delete(cacheName);
+    });
+  });
+}
+
 // State management
 let currentCategory = 'Todas';
 let searchQuery = '';
@@ -361,6 +370,33 @@ const fileIcon = `
 let categoriesData = [];
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Adiciona cache-busting a todos os recursos estáticos
+  const timestamp = new Date().getTime();
+  
+  // Atualiza links de CSS
+  document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && !href.includes('?_=')) {
+      link.setAttribute('href', `${href}?_=${timestamp}`);
+    }
+  });
+
+  // Atualiza scripts
+  document.querySelectorAll('script[src]').forEach(script => {
+    const src = script.getAttribute('src');
+    if (src && !src.includes('?_=')) {
+      script.setAttribute('src', `${src}?_=${timestamp}`);
+    }
+  });
+
+  // Atualiza imagens
+  document.querySelectorAll('img[src]').forEach(img => {
+    const src = img.getAttribute('src');
+    if (src && !src.includes('?_=')) {
+      img.setAttribute('src', `${src}?_=${timestamp}`);
+    }
+  });
+
   document.getElementById('closePopup')?.addEventListener('click', closePopup);
   document.getElementById('popupOverlay')?.addEventListener('click', (event) => {
     if (event.target === document.getElementById('popupOverlay')) {
@@ -381,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startupBtn.addEventListener('click', handleStartupClick);
   }
 
-  fetch('data/startups.json')
+  fetch(`data/startups.json?_=${new Date().getTime()}`)
     .then(response => {
       if (!response.ok) throw new Error('Erro ao carregar startups.json: ' + response.statusText);
       return response.json();
