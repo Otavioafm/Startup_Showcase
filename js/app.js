@@ -63,6 +63,12 @@ let mainCategories = ['Todas'];
 let extraCategories = [];
 let showExtraCategories = false;
 
+// Função para truncar texto longo
+function truncateText(text, maxLength) {
+  if (text.length <= maxLength) return text;
+  return text.substring(0, maxLength).trim() + '...';
+}
+
 // Render category filters
 function renderCategories(categories) {
   // Remove "Todas" do array de categorias pra evitar duplicação
@@ -167,7 +173,7 @@ function renderStartups() {
           <h3 class="card-title">${startup.nome}</h3>
           <span class="card-category">${startup.categoria}</span>
         </div>
-        <p class="card-description">${startup.descricao}</p>
+        <p class="card-description">${truncateText(startup.descricao, 100)}</p>
         <div class="card-stats">
         </div>
         <div class="card-actions">
@@ -196,11 +202,18 @@ function openModal(startupId) {
   const startup = startups.find(s => s.id === startupId);
   if (!startup) return;
 
+  // Converte o URL do YouTube pro formato embed
+  let embedUrl = startup.media?.video;
+  if (embedUrl && embedUrl.includes('watch?v=')) {
+    const videoId = embedUrl.split('v=')[1]?.split('&')[0]; // Extrai o ID do vídeo
+    embedUrl = `https://www.youtube.com/embed/${videoId}`;
+  }
+
   modalTitle.textContent = startup.nome;
   modalBody.innerHTML = `
     <div class="startup-info">
       <div class="startup-image">
-        <img src="${startup.image}" alt="${startup.nome}">
+        <img src="${startup.image}" alt="${startup.nome}" onerror="this.src='https://via.placeholder.com/800x300?text=Imagem+Indisponível';">
       </div>
       <div class="info-content">
         <h3>Sobre a empresa</h3>
@@ -253,11 +266,11 @@ function openModal(startupId) {
       </div>
     ` : ''}
 
-    ${startup.media?.video ? `
+    ${embedUrl ? `
       <div class="video-container">
         <h3>Vídeo de apresentação</h3>
         <div class="video-wrapper">
-          <iframe src="${startup.media.video}" 
+          <iframe src="${embedUrl}" 
                   title="YouTube video player" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                   allowfullscreen></iframe>

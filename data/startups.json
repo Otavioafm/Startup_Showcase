@@ -2,241 +2,138 @@
   "startups": [
     {
       "id": 1,
-      "nome": "TechFlow Solutions",
-      "categoria": "FinTech",
-      "estagio": "Pre-seed",
-      "descricao": "Plataforma SaaS de automação de processos empresariais com IA integrada.",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "logo": "https://images.unsplash.com/photo-1567446537708-ac4aa75c9c28?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "nome": "Souv",
+      "categoria": "MediaTech",
+      "estagio": "Seed",
+      "descricao": "Souv é uma plataforma de tecnologia de mídia que oferece ferramentas para jornalistas e produtores de conteúdo criarem, editarem e transmitirem notícias em tempo real, em texto, áudio e vídeo. A solução integra funcionalidades como teleprompter, pauta colaborativa e gestão de reportagens, permitindo uma produção de conteúdo mais ágil e eficiente.",
+      "image": "img/baner/souv-baner.jpg",
+      "logo": "img/logo/souv-logo.jpg",
       "team": [
         {
-          "name": "João Silva",
+          "name": "Bruna Luna Bastos",
           "role": "CEO & Founder",
-          "photo": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "10 anos de experiência em tecnologia"
-        },
-        {
-          "name": "Maria Santos",
-          "role": "CTO",
-          "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Especialista em IA"
+          "photo": "img/time/souv-ceo.png",
+          "bio": "Formada em Jornalismo na PUCPR"
         }
+
+
       ],
       "documents": [
         {
-          "name": "Pitch Deck",
-          "url": "https://example.com/techflow-pitch.pdf"
+          "name": "",
+          "url": ""
         },
         {
-          "name": "Relatório Financeiro",
-          "url": "https://example.com/techflow-finance.pdf"
+          "name": "",
+          "url": ""
         }
       ],
+
+
       "roadmap": [
         {
-          "date": "2024 Q1",
-          "milestone": "Lançamento da versão 2.0"
+          "date": "2025 Q2",
+          "milestone": "Recrutar reporteres e expandir o alcance da paltaforma."
         },
+
         {
-          "date": "2024 Q2",
-          "milestone": "Expansão internacional"
+          "date": "2024 Q3",
+          "milestone": "Campanhas de marketing."
+        },
+
+        {
+          "date": "2024 Q4",
+          "milestone": "Refinamento da plataforma."
         }
-      ],
-      "media": {
-        "video": "https://www.youtube.com/embed/exemplo"
-      }
+      ]
     },
+
+
+
     {
       "id": 2,
-      "nome": "AgroSmart Brasil",
-      "categoria": "AgriTech",
-      "descricao": "Sistema IoT para monitoramento e otimização de produção agrícola.",
-      "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "logo": "https://images.unsplash.com/photo-1560493676-04071c5f467b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "nome": "Eleventec",
+      "categoria": "CleanTech",
+      "estagio": "Tração",
+      "descricao": "Carregamento por indução em veículos automotores, tanto estático como dinâmico.",
+      "image": "img/baner/eleventec-baner.png",
+      "logo": "img/logo/eleventec-logo.png.jpg",
       "team": [
         {
-          "name": "Pedro Oliveira",
-          "role": "CEO & Founder",
-          "photo": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Engenheiro Agrônomo com MBA em Agronegócio"
-        },
-        {
-          "name": "Ana Costa",
-          "role": "CTO",
-          "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Especialista em IoT e Agricultura de Precisão"
+          "name": "Rodrigo de Freitas Santos",
+          "role": "CTO & Founder",
+          "photo": "img/time/eleventec-ceo.jpeg",
+          "bio": "Engenharia Elétrica USP."
         }
       ],
-      "documents": [
-        {
-          "name": "Pitch Deck",
-          "url": "https://example.com/agrosmart-pitch.pdf"
-        },
-        {
-          "name": "Relatório de Impacto",
-          "url": "https://example.com/agrosmart-impact.pdf"
-        }
-      ],
+      
+
       "roadmap": [
         {
-          "date": "2024 Q1",
-          "milestone": "Expansão para América Latina"
+          "date": "2025 Q2",
+          "milestone": "Expansão regional."
         },
+
         {
-          "date": "2024 Q2",
-          "milestone": "Lançamento do Sistema 2.0"
+          "date": "2025 Q3",
+          "milestone": "Aumentar infleuncia no mercado."
         }
       ],
       "media": {
-        "video": "https://www.youtube.com/embed/exemplo2"
+        "video": "https://www.youtube.com/watch?v=8Jpmxg3AM3c"
       }
     },
+
+
     {
       "id": 3,
-      "nome": "HealthTech AI",
-      "categoria": "HealthTech",
-      "descricao": "Plataforma de diagnóstico médico assistido por IA.",
-      "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "logo": "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+      "nome": "Viver",
+      "categoria": "Healthtech",
+      "estagio": "Seed",
+      "descricao": "Visão para Aprender é uma plataforma digital desenvolvida por duas fonoaudiólogas, Maria Aparecida Cormedi e Elaine Silva Bezerra, que iniciou suas atividades em outubro de 2021, durante a pandemia de Covid-19. O objetivo da VIVER é oferecer recursos terapêuticos para pessoas com deficiência visual, transtornos de leitura e escrita e autismo. Através da plataforma web, profissionais da área da saúde e educação podem avaliar e intervir nas habilidades de processamento visual dos pacientes, tanto em atendimentos presenciais quanto remotos. A equipe da VIVER conta com sete membros, incluindo pesquisadores, designers de jogos, desenvolvedores e consultores. Atualmente, a VIVER faz parte do projeto PIPE 1 – Fapesp e tem como objetivo proporcionar maior engajamento e adesão aos atendimentos, além de mensurar a evolução e desenvolvimento dos.",
+      "image": "img/baner/viver-baner.png",
+      "logo": "img/logo/viver-logo.png",
       "team": [
         {
-          "name": "Carlos Santos",
+          "name": "Elaine Silva Bezerra",
           "role": "CEO & Founder",
-          "photo": "https://images.unsplash.com/photo-1537368910025-700350fe46c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Médico com especialização em IA na Saúde"
-        },
-        {
-          "name": "Laura Silva",
-          "role": "CTO",
-          "photo": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "PhD em Machine Learning aplicado à Medicina"
+          "photo": "img/time/viver-ceo.jpeg",
+          "bio": "UNIFESP - Especialista em Fala e Linguagem."
         }
       ],
-      "documents": [
-        {
-          "name": "Pitch Deck",
-          "url": "https://example.com/healthtech-pitch.pdf"
-        },
-        {
-          "name": "Estudo Clínico",
-          "url": "https://example.com/healthtech-study.pdf"
-        }
-      ],
+
       "roadmap": [
         {
-          "date": "2024 Q1",
-          "milestone": "Certificação ANVISA"
+          "date": "2025 Q2",
+          "milestone": "Consolidar a marca com o nosso público."
         },
+
         {
-          "date": "2024 Q2",
-          "milestone": "Expansão para Hospitais"
+          "date": "2025 Q3",
+          "milestone": "Ter mais captação."
+        },
+
+        {
+          "date": "2025 Q4",
+          "milestone": "Aumentar a base de clientes."
         }
       ],
       "media": {
-        "video": "https://www.youtube.com/embed/exemplo3"
-      }
-    },
-    {
-      "id": 4,
-      "nome": "EduTech Pro",
-      "categoria": "EdTech",
-      "descricao": "Plataforma adaptativa de ensino online com IA.",
-      "image": "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "logo": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-      "team": [
-        {
-          "name": "Marcos Lima",
-          "role": "CEO & Founder",
-          "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Educador e Especialista em Tecnologia Educacional"
-        },
-        {
-          "name": "Julia Costa",
-          "role": "CTO",
-          "photo": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Mestre em Ciência da Computação"
-        }
-      ],
-      "documents": [
-        {
-          "name": "Pitch Deck",
-          "url": "https://example.com/edutech-pitch.pdf"
-        },
-        {
-          "name": "Caso de Sucesso",
-          "url": "https://example.com/edutech-case.pdf"
-        }
-      ],
-      "roadmap": [
-        {
-          "date": "2024 Q1",
-          "milestone": "Lançamento do App Mobile"
-        },
-        {
-          "date": "2024 Q2",
-          "milestone": "Integração com LMS"
-        }
-      ],
-      "media": {
-        "video": "https://www.youtube.com/embed/exemplo4"
-      }
-    },
-    {
-      "id": 5,
-      "nome": "FinanceFlow",
-      "categoria": "FinTech",
-      "descricao": "Sistema de gestão financeira empresarial.",
-      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80",
-      "logo": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-      "team": [
-        {
-          "name": "Roberto Alves",
-          "role": "CEO & Founder",
-          "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "15 anos de experiência em Mercado Financeiro"
-        },
-        {
-          "name": "Fernanda Santos",
-          "role": "CTO",
-          "photo": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
-          "bio": "Especialista em Blockchain e Sistemas Financeiros"
-        }
-      ],
-      "documents": [
-        {
-          "name": "Pitch Deck",
-          "url": "https://example.com/financeflow-pitch.pdf"
-        },
-        {
-          "name": "White Paper",
-          "url": "https://example.com/financeflow-whitepaper.pdf"
-        }
-      ],
-      "roadmap": [
-        {
-          "date": "2024 Q1",
-          "milestone": "Integração com Open Banking"
-        },
-        {
-          "date": "2024 Q2",
-          "milestone": "Módulo de Crypto"
-        }
-      ],
-      "media": {
-        "video": "https://www.youtube.com/embed/exemplo5"
+        "video": "https://www.youtube.com/watch?v=VOrDouqFoo4"
       }
     }
+
+    
+    
+    
   ],
   "categories": [
     "Todas",
-    "FinTech",
-    "HealthTech",
-    "EdTech",
-    "AgriTech",
-    "DeepTech",
-    "LogTech",
+    "MediaTech",
     "CleanTech",
-    "PropTech",
+    "Healthtech",
+    "EdTech",
+    "DeepTech",
     "FoodTech"
   ]
 }
