@@ -99,6 +99,17 @@ body {
   top: -36rem;
 }
 
+.primary-investimento{
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  transition: 0.2s;
+  white-space: nowrap;
+  background: #0066cc;;
+  top: -36rem;
+}
+
 .nav-button.primary:hover {
   background: #0052a3;
 }
@@ -794,7 +805,7 @@ body {
         width: 100%;
         padding: 1rem;
         text-align: center;
-        top: -22rem;
+        top: -35rem;
         position: relative;
     }
 

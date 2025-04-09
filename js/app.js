@@ -443,6 +443,10 @@ storyModal.addEventListener('click', (e) => {
   }
 });
 
+document.getElementById('investirButton').onclick = function() {
+  window.location.href = 'emBreve.html';
+};
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const menuOverlay = document.querySelector('.menu-overlay');
